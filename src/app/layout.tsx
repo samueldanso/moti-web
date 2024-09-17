@@ -1,3 +1,4 @@
+import { ThemeProvider } from '@/components/theme/providers'
 import type { Metadata } from 'next'
 import { Plus_Jakarta_Sans } from 'next/font/google'
 import '../styles/globals.css'
@@ -16,8 +17,12 @@ export default function RootLayout({
     children: React.ReactNode
 }>) {
     return (
-        <html lang="en">
-            <body className={`${jakarta.className} bg-black`}>{children}</body>
+        <html lang="en" suppressHydrationWarning>
+            <body className={jakarta.className}>
+       <ThemeProvider attribute="class" defaultTheme="light" disableTransitionOnChange>
+       {children}
+        </ThemeProvider>
+        </body>
         </html>
     )
 }
