@@ -18,8 +18,8 @@ export default function RootLayout({
 }>) {
     return (
         <html lang="en" suppressHydrationWarning>
-            <body className={jakarta.className}>
-                <ThemeProvider attribute="class" defaultTheme="light" disableTransitionOnChange>
+            <body className={`${jakarta.className} bg-dark-bg text-white`}>
+                <ThemeProvider attribute="class" defaultTheme="dark" disableTransitionOnChange>
                     {children}
                 </ThemeProvider>
             </body>
