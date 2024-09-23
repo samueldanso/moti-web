@@ -1,7 +1,9 @@
+import { About, Home, ZapDouToneBlack } from '@/icons'
+
 export type MenuProps = {
     id: number
     label: string
-    icon: string
+    icon: React.ReactNode
     path: string
     section?: boolean
     integration?: boolean
@@ -11,21 +13,21 @@ export const LANDING_PAGE_MENU: MenuProps[] = [
     {
         id: 0,
         label: 'Home',
-        icon: 'Home',
+        icon: <Home />,
         path: '/',
         section: true,
     },
     {
         id: 1,
         label: 'Features',
-        icon: 'CreditCard',
+        icon: <ZapDouToneBlack />,
         path: '#features',
         section: true,
     },
     {
         id: 2,
         label: 'FAQ',
-        icon: 'Explore',
+        icon: <About />,
         path: '#faq',
         section: true,
     },
