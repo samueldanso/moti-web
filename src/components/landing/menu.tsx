@@ -1,7 +1,7 @@
 'use client'
 
 import { Card, CardContent } from '@/components/ui/card'
-import { LANDING_PAGE_MENU } from '@/constants/menu'
+import { LANDING_PAGE_MENU } from '@/constants/menus'
 import { useNavigation } from '@/hooks/navigation'
 import { cn } from '@/lib/utils'
 import Link from 'next/link'
