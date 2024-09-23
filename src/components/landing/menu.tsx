@@ -40,7 +40,7 @@ const Menu = ({ orientation }: MenuProps) => {
         case 'mobile':
             return (
                 <div className="flex flex-col mt-10">
-                    {EMOTISYNC_CONSTANTS.landingPageMenu.map((menuItem) => (
+                    {LANDING_PAGE_MENU.map((menuItem) => (
                         <Link
                             href={menuItem.path}
                             {...(menuItem.section && {
