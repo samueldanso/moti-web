@@ -15,8 +15,8 @@ const Menu = ({ orientation }: MenuProps) => {
     switch (orientation) {
         case 'desktop':
             return (
-                <Card className="bg-themeGray border-themeGray bg-clip-padding backdrop--blur__safari backdrop-filter backdrop-blur-2xl bg-opacity-60 p-1 lg:flex hidden rounded-full">
-                    <CardContent className="p-0 flex gap-2">
+                <Card className="backdrop--blur__safari hidden rounded-full border-themeGray bg-themeGray bg-opacity-60 bg-clip-padding p-1 backdrop-blur-2xl backdrop-filter lg:flex">
+                    <CardContent className="flex gap-2 p-0">
                         {LANDING_PAGE_MENU.map((menuItem) => (
                             <Link
                                 href={menuItem.path}
@@ -24,8 +24,8 @@ const Menu = ({ orientation }: MenuProps) => {
                                     onClick: () => onSetSection(menuItem.path),
                                 })}
                                 className={cn(
-                                    'rounded-full flex gap-2 py-2 px-4 items-center',
-                                    section == menuItem.path ? 'bg-[#09090B] border-[#27272A]' : '',
+                                    'flex items-center gap-2 rounded-full px-4 py-2',
+                                    section == menuItem.path ? 'border-[#27272A] bg-[#09090B]' : '',
                                 )}
                                 key={menuItem.id}
                             >
@@ -39,7 +39,7 @@ const Menu = ({ orientation }: MenuProps) => {
 
         case 'mobile':
             return (
-                <div className="flex flex-col mt-10">
+                <div className="mt-10 flex flex-col">
                     {LANDING_PAGE_MENU.map((menuItem) => (
                         <Link
                             href={menuItem.path}
@@ -47,8 +47,8 @@ const Menu = ({ orientation }: MenuProps) => {
                                 onClick: () => onSetSection(menuItem.path),
                             })}
                             className={cn(
-                                'rounded-full flex gap-2 py-2 px-4 items-center',
-                                section == menuItem.path ? 'bg-themeGray border-[#27272A]' : '',
+                                'flex items-center gap-2 rounded-full px-4 py-2',
+                                section == menuItem.path ? 'border-[#27272A] bg-themeGray' : '',
                             )}
                             key={menuItem.id}
                         >

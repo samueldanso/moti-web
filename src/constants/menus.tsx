@@ -19,11 +19,12 @@ export const LANDING_PAGE_MENU: MenuProps[] = [
     },
     {
         id: 1,
-        label: 'Features',
+        label: 'How It Works',
         icon: <ZapDouToneBlack />,
-        path: '#features',
+        path: '#how-it-works',
         section: true,
     },
+
     {
         id: 2,
         label: 'FAQ',

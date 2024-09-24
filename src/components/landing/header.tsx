@@ -6,18 +6,16 @@ import Menu from './menu'
 
 export default function Header() {
     return (
-        <header className="w-full flex justify-between sticky top-0 items-center py-5 px-5 z-50">
-            {/* <Link href="/">
-                <Image src="/logo.png" alt="EMOTISYNC LOGO" width={150} height={50} />
-            </Link> */}
-
-            <p className="font-bold text-2xl">EmotiSync.</p>
+        <header className="sticky top-0 z-50 flex w-full items-center justify-between py-5 md:px-4 lg:px-20">
+            <p className="text-2xl font-bold">EmotiSync.</p>
 
             <Menu orientation="desktop" />
+
             <div className="flex gap-2">
-                <Link href="/sign-up">
-                    <Button>Try it now</Button>
+                <Link href="/sign-in">
+                    <Button className="bg-purple-300 text-base">Try it for free</Button>
                 </Link>
+
                 <GlassSheet
                     triggerClass="lg:hidden"
                     trigger={

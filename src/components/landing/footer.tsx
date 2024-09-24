@@ -1,11 +1,10 @@
 import Image from 'next/image'
-import Link from 'next/link'
 
 export default function Footer() {
     return (
-        <footer className="bg-themeGray/20 py-8">
+        <footer className="py-8">
             <div className="container mx-auto px-4">
-                <div className="flex flex-col md:flex-row justify-between items-center">
+                <div className="flex flex-col items-center justify-between md:flex-row">
                     <div className="mb-4 md:mb-0">
                         <Image
                             src="/images/logo.png"
@@ -14,36 +13,9 @@ export default function Footer() {
                             height={40}
                         />
                     </div>
-                    <nav className="mb-4 md:mb-0">
-                        <ul className="flex space-x-6">
-                            <li>
-                                <Link
-                                    href="#features"
-                                    className="text-themeTextGray hover:text-themeTextWhite transition-colors"
-                                >
-                                    Features
-                                </Link>
-                            </li>
-                            <li>
-                                <Link
-                                    href="#how-it-works"
-                                    className="text-themeTextGray hover:text-themeTextWhite transition-colors"
-                                >
-                                    How It Works
-                                </Link>
-                            </li>
-                            <li>
-                                <Link
-                                    href="#faq"
-                                    className="text-themeTextGray hover:text-themeTextWhite transition-colors"
-                                >
-                                    FAQ
-                                </Link>
-                            </li>
-                        </ul>
-                    </nav>
-                    <div className="text-center md:text-right text-themeTextGray">
-                        <p>&copy; 2023 EmotiSync</p>
+
+                    <div className="text-center text-themeTextGray md:text-right">
+                        <p>&copy; 2024 EmotiSync</p>
                     </div>
                 </div>
             </div>
